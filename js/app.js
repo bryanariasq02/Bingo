@@ -32,8 +32,25 @@ while(cantidad<numeros){
     }
 }
 
-console.log(total)
+console.log("Posibilidades: ", total)
 
-function juega() {
-    alert('Se ha dado clic al botón!');
-  }
+// let prueba = (Math.floor(Math.random() * total.length));
+// let balota = total[prueba]
+
+// console.log("La balota lanzada es: ", balota)
+
+
+
+function juega(pArray) {
+    // let inicio = 1;
+    // let fin = 75;
+
+    // let balota = (inicio + Math.floor(Math.random() * fin))
+    // console.log("La balota lanzada es: ", balota)
+    console.log("Vamos a juga")
+    console.log(pArray);
+
+    pArray.forEach(element => {
+        console.log("La balota lanzada es: ", element)
+    });
+}
