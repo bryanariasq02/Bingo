@@ -34,23 +34,25 @@ while(cantidad<numeros){
 
 console.log("Posibilidades: ", total)
 
-// let prueba = (Math.floor(Math.random() * total.length));
-// let balota = total[prueba]
-
-// console.log("La balota lanzada es: ", balota)
-
-
-
 function juega(pArray) {
-    // let inicio = 1;
-    // let fin = 75;
 
-    // let balota = (inicio + Math.floor(Math.random() * fin))
-    // console.log("La balota lanzada es: ", balota)
     console.log("Vamos a juga")
-    console.log(pArray);
 
-    pArray.forEach(element => {
-        console.log("La balota lanzada es: ", element)
-    });
+    let index = 0;
+
+    for(index; index <= pArray.length; index++) {
+
+        console.log("La balota lanzada es: ", pArray[index])
+        pArray.shift()
+        break
+    }
+
+    if(pArray.length === 0) {
+        console.log("Fin de juego")
+        const boton = document.getElementById('prueba');
+        boton.disabled = true;
+        boton.style.backgroundColor = '#F00A0A'
+        boton.style.color = '#fff'
+    }
+
 }
