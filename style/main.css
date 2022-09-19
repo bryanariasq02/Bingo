@@ -36,15 +36,21 @@ th {
 }
 
 #balota {
+    display: flex;
+
     font-size:50px;
     display:block;
     margin: 20px auto;
     width: 5rem;
     line-height: 5rem;
     border-radius: 50%;
-    background-color: #000;
-    color: rgb(23, 78, 197);
+    background-color: rgb(23, 78, 197);
+    color: rgb(255, 255, 255);
     text-align:center;
+
+    /**
+    animation-name: balota;
+    animation-duration: 5s;*/
 }
 
 button{
@@ -62,4 +68,7 @@ button:hover{
     font-size: 220%;
 }
 
-
+@keyframes balota {
+    from {background-color: rgb(255, 255, 255);}
+    to {background-color: rgb(23, 78, 197);}
+}
