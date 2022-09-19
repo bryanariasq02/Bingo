@@ -40,13 +40,13 @@ function juega(pArray) {
     let numero;
     let ale;
     let alea;
-    alea = pArray
+    alea = pArray.slice()
     let divBalota = document.querySelector('#balota');
     var a;
 
     //Funcion animacion aleatorio
     function num(){
-        divBalota.style.color = 'black'
+
         for(index; index <= alea.length; index++) {
             ale = alea[index]
             alea.shift()
@@ -56,10 +56,11 @@ function juega(pArray) {
     }
 
     for(index; index <= pArray.length; index++) {
-
+        var current = pArray[index]
         console.log("La balota encontrada es: ", pArray[index])
         numero = pArray[index]
         pArray.shift()
+        console.log(pArray)
         break
     }
 
@@ -72,8 +73,15 @@ function juega(pArray) {
         boton.style.color = '#d8d0ce';
         boton.style.borderColor = '#fff';
     }
-
+    function stopTextColor() {
+        clearInterval(a);
+        // liberar nuestro inervalId de la variable
+        divBalota.textContent = current;
+        a = null;
+    }
     a = setInterval(num,100);
-    divBalota.textContent = numero;
-    //clearInterval(a);
+    setTimeout(() => {
+        console.log("1 Segundo esperado")
+        stopTextColor(current)
+      }, 1000);
 }
