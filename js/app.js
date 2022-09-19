@@ -36,10 +36,24 @@ console.log("Posibilidades: ", total)
 
 function juega(pArray) {
 
-    // console.log("Vamos a juga")
-
     let index = 0;
     let numero;
+    let ale;
+    let alea;
+    alea = pArray
+    let divBalota = document.querySelector('#balota');
+    var a;
+
+    //Funcion animacion aleatorio
+    function num(){
+        divBalota.style.color = 'black'
+        for(index; index <= alea.length; index++) {
+            ale = alea[index]
+            alea.shift()
+            divBalota.textContent = ale
+            break
+        }
+    }
 
     for(index; index <= pArray.length; index++) {
 
@@ -59,7 +73,7 @@ function juega(pArray) {
         boton.style.borderColor = '#fff';
     }
 
-    let divBalota = document.querySelector('#balota');
-    divBalota.textContent = numero
-
+    a = setInterval(num,100);
+    divBalota.textContent = numero;
+    //clearInterval(a);
 }
