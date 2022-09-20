@@ -1,13 +1,22 @@
 * {
-    background: #ffffff ;
+    background: #eeeeee;
+}
+
+body {
+    background-color: #eeeeee;
 }
 
 h1 {
     text-align: center;
     font-family: sans-serif;
+    font-weight: bolder;
     color: #0637da;
     padding-top: 10px;
     font-size:200%;
+}
+
+#content {
+    margin-top: 30px;
 }
 
 #carton {
@@ -18,15 +27,38 @@ th, td {
     font-family: sans-serif;
     margin: 0 auto;
     text-align: center;
-    border: 2px solid #0637da;
     width: 70px;
     border-radius: 15px;
     font-size:200%;
 }
 
 th {
-    color: #0637da;
-    font-style: sans-serif;
+    color: #ffffff;
+    border: #ffffff;
+}
+
+td {
+    background: #ffffff;
+}
+
+th[name=B] {
+    background: red;
+}
+
+th[name=I] {
+    background: orange;
+}
+
+th[name=N] {
+    background: yellowgreen;
+}
+
+th[name=G] {
+    background: blue;
+}
+
+th[name=O] {
+    background: purple;
 }
 
 #bingo {
@@ -35,37 +67,39 @@ th {
     padding-top: 2%;
 }
 
-#balota {
-    display: flex;
-
-    font-size:50px;
-    display:block;
-    margin: 20px auto;
-    width: 5rem;
-    line-height: 5rem;
-    border-radius: 50%;
-    background-color: rgb(23, 78, 197);
-    color: rgb(255, 255, 255);
-    text-align:center;
-
-    /**
-    animation-name: balota;
-    animation-duration: 5s;*/
-}
-
 button{
     border-radius: 15px;
-    border: 2px solid #0637da;
+    border: 2px solid rgb(23, 78, 197);
     font-size: 200%;
     font-family: sans-serif;
-    background-color: #0637da;
+    font-style: italic;
+    background-color: rgb(23, 78, 197);
     color: #ffffff;
+    width: 450px;
+    margin-left: 30px;
+    margin-top: 100px;
 }
 
 button:hover{
     background-color: #ffffff;
     color: #0637da;
     font-size: 220%;
+}
+
+#balota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+    /* display:block; */
+    margin: 20px auto;
+    width: 15rem;
+    height: 15rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    background-color: rgb(23, 78, 197);
+    color: rgb(255, 255, 255);
+    text-align: center;
 }
 
 @keyframes balota {
