@@ -43,6 +43,7 @@ function juega(pArray) {
     alea = pArray.slice()
     let divBalota = document.querySelector('#balota');
     var a;
+    let conversion;
 
     //Funcion animacion aleatorio
     function num(){
@@ -60,7 +61,7 @@ function juega(pArray) {
         console.log("La balota encontrada es: ", pArray[index])
         numero = pArray[index]
         pArray.shift()
-        console.log(pArray)
+        // console.log(pArray)
         break
     }
 
@@ -73,15 +74,27 @@ function juega(pArray) {
         boton.style.color = '#d8d0ce';
         boton.style.borderColor = '#fff';
     }
+
     function stopTextColor() {
         clearInterval(a);
         // liberar nuestro inervalId de la variable
         divBalota.textContent = current;
         a = null;
     }
+
     a = setInterval(num,100);
     setTimeout(() => {
-        console.log("1 Segundo esperado")
+        // console.log("1 Segundo esperado")
         stopTextColor(current)
-      }, 1000);
+    }, 1000);
+
+    //======================== Tablero marcado ================
+
+    console.log(typeof(current), current);
+    conversion = current.toString();
+    console.log(typeof(conversion), conversion)
+
+    const numberHTML = document.getElementById(conversion);
+    numberHTML.style.background = 'blue';
+    numberHTML.style.color = 'white';
 }
