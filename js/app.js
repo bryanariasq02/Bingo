@@ -87,6 +87,37 @@ function juega(pArray) {
         clearInterval(a);
         // liberar nuestro inervalId de la variable
         divBalota.textContent = current;
+
+
+
+        console.log(typeof(current), current);
+        conversion = current.toString();
+        console.log(typeof(conversion), conversion)
+    
+        const numberHTML = document.getElementById(conversion);
+    
+        if(current <= 15) {
+            numberHTML.style.background = '#e85c5c';
+            numberHTML.style.color = 'white';
+    
+        } else if (current > 15 && current <= 30) {
+            numberHTML.style.background = '#f97c30';
+            numberHTML.style.color = 'white';
+    
+        } else if (current > 30 && current <= 45) {
+            numberHTML.style.background = '#a5f242' ;
+            numberHTML.style.color = 'white';
+    
+        } else if (current > 45 && current <= 60) {
+            numberHTML.style.background = '#518eec' ;
+            numberHTML.style.color = 'white';
+            
+        } else {
+            numberHTML.style.background = '#c051ec' ;
+            numberHTML.style.color = 'white';
+        }
+
+
         a = null;
     }
 
@@ -98,30 +129,4 @@ function juega(pArray) {
 
     //======================== Tablero marcado ================
 
-    console.log(typeof(current), current);
-    conversion = current.toString();
-    console.log(typeof(conversion), conversion)
-
-    const numberHTML = document.getElementById(conversion);
-
-    if(current <= 15) {
-        numberHTML.style.background = '#e85c5c';
-        numberHTML.style.color = 'white';
-
-    } else if (current > 15 && current <= 30) {
-        numberHTML.style.background = '#f97c30';
-        numberHTML.style.color = 'white';
-
-    } else if (current > 30 && current <= 45) {
-        numberHTML.style.background = '#a5f242' ;
-        numberHTML.style.color = 'white';
-
-    } else if (current > 45 && current <= 60) {
-        numberHTML.style.background = '#518eec' ;
-        numberHTML.style.color = 'white';
-        
-    } else {
-        numberHTML.style.background = '#c051ec' ;
-        numberHTML.style.color = 'white';
-    }
 }
