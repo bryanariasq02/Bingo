@@ -108,9 +108,9 @@ button:hover{
 }
 
 footer {
-    height:70px;
+    /* height:70px; */
     line-height:50px;
-    background: radial-gradient(#dee2e6, transparent);
+    background: radial-gradient(#dfe4e9, transparent);
     color: black;
     font-size: 20px;
     text-align: center;
@@ -121,6 +121,7 @@ footer {
 }
 
 footer > div {
-    font-weight: bolder;
+    font-weight: 550;
     font-size: 30px;
+    background: radial-gradient(#dfe4e9, transparent);
 }
