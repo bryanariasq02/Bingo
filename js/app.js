@@ -45,13 +45,15 @@ function juega(pArray) {
     var a;
     let conversion;
 
+    const boton = document.getElementById('prueba');
+
     //Funcion animacion aleatorio
     function num(){
 
         for(index; index <= alea.length; index++) {
             ale = alea[index]
             alea.shift()
-            divBalota.textContent = ale
+            divBalota.textContent = ale;
             break
         }
     }
@@ -59,6 +61,8 @@ function juega(pArray) {
     for(index; index <= pArray.length; index++) {
         var current = pArray[index]
         console.log("La balota encontrada es: ", pArray[index])
+        boton.textContent = "Siguiente balota"
+        boton.style.fontStyle = "italic"
         numero = pArray[index]
         pArray.shift()
         // console.log(pArray)
@@ -68,11 +72,15 @@ function juega(pArray) {
     if(pArray.length === 0) {
 
         console.log("Fin de juego")
-        const boton = document.getElementById('prueba');
+        // const boton = document.getElementById('prueba');
         boton.disabled = true;
-        boton.style.backgroundColor = '#F00A0A';
-        boton.style.color = '#d8d0ce';
-        boton.style.borderColor = '#fff';
+        // boton.style.backgroundColor = ' #67e9bc ';
+        boton.style.backgroundColor = 'gray'
+        boton.style.color = 'white';
+        boton.style.borderColor = 'white';
+        boton.textContent = "No hay mas numeros";
+        divBalota.style.transition = '2.5s'
+        divBalota.style.background = 'gray'
     }
 
     function stopTextColor() {
@@ -95,8 +103,6 @@ function juega(pArray) {
     console.log(typeof(conversion), conversion)
 
     const numberHTML = document.getElementById(conversion);
-    // numberHTML.style.background = 'blue';
-    // numberHTML.style.color = 'white';
 
     if(current <= 15) {
         numberHTML.style.background = '#e85c5c';
