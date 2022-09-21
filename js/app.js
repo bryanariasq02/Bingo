@@ -78,7 +78,7 @@ function juega(pArray) {
         boton.style.backgroundColor = 'gray'
         boton.style.color = 'white';
         boton.style.borderColor = 'white';
-        boton.textContent = "No hay mas numeros";
+        boton.textContent = "No hay más números";
         divBalota.style.transition = '2.5s'
         divBalota.style.background = 'gray'
     }
