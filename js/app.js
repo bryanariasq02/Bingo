@@ -2,7 +2,7 @@ Xo = (new Date()).getTime() / 1000;
 // console.log(parseInt(Xo))
 a = 1103515245
 c = 12345
-m = 32768
+m = 2147483648
 
 lim1 = 1
 lim2 = 75
